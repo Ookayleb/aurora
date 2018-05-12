@@ -4,14 +4,54 @@ html{
 
 body{
     margin:             0;
-    /*background-color:   black;          /* fall back */
     
-    /* SVG fallback for IE 9 (could be data URI, or could use filter) */
-    background-image:   url("images/gradientBackground"); 
+    background-color:   black;          /* fall back */
+    background-image:   -webkit-radial-gradient(#1A203B, black, #455480 150%);  /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+    background-image:   -moz-radial-gradient(#1A203B, black, #455480 150%);     /* Firefox 3.6 - 15 */
+    background-image:   -o-radial-gradient(#1A203B, black, #455480 150%);       /* Opera 11.1 - 12 */
 
-    /*background-image:   -webkit-radial-gradient(#1A203B, black, #455480 150%);  /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
-    /*background-image:   -moz-radial-gradient(#1A203B, black, #455480 150%);     /* Firefox 3.6 - 15 */
-    /*background-image:   -o-radial-gradient(#1A203B, black, #455480 150%);       /* Opera 11.1 - 12 */
+    background:         radial-gradient(#1A203B, black, #455480 150%);
+    
+    background-image:   url("../images/gradientBackground.svg"); 
+    
+    color: white;
+    font-family: "Roboto";
+    
+}
 
-/*    background:         radial-gradient(#1A203B, black, #455480 150%);*/
+p{
+    font-family: "Courier New";
+}
+
+.menu{
+    display: flex;
+}
+
+
+#card1{
+    text-align: center;
+}
+
+#main{
+    display: flex;
+    padding: 0 5%;
+    text-align: justify;
+}
+
+.card{
+    width: 33%;
+    padding: 0 4%;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    font-size: 16px;
+}
+
+#profilePic{
+    border-radius: 100px;
+    width: 50%;
 }
