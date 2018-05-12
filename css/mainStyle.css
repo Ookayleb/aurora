@@ -1,0 +1,17 @@
+html{
+    height: 100%;
+}
+
+body{
+    margin:             0;
+    /*background-color:   black;          /* fall back */
+    
+    /* SVG fallback for IE 9 (could be data URI, or could use filter) */
+    background-image:   url("images/gradientBackground"); 
+
+    /*background-image:   -webkit-radial-gradient(#1A203B, black, #455480 150%);  /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+    /*background-image:   -moz-radial-gradient(#1A203B, black, #455480 150%);     /* Firefox 3.6 - 15 */
+    /*background-image:   -o-radial-gradient(#1A203B, black, #455480 150%);       /* Opera 11.1 - 12 */
+
+/*    background:         radial-gradient(#1A203B, black, #455480 150%);*/
+}
