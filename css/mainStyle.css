@@ -12,41 +12,19 @@ body{
 
     background:         radial-gradient(#1A203B, black, #455480 150%);
     
+    
     background-image:   url("../images/gradientBackground.svg"); 
+    background-size:    cover;
     
-    color: white;
-    font-family: "Roboto";
+    color:              white;
+    font-family:        "Roboto";   
     
+    display:            flex;
+    flex-direction:     column;
+    align-items:        center;
+    width:              100%;
 }
 
-p{
-    font-family: "Courier New";
-}
-
-.menu{
-    display:    flex;
-}
-
-
-#card1{
-    text-align: center;
-}
-
-#main{
-    display:    flex;
-    padding:    0 5%;
-    text-align: justify;
-}
-
-.card{
-    width:      33%;
-    padding:    15% 2%;
-    margin:     0 1%;
-    background: radial-gradient(circle at bottom right, #243059, #455480 75%, #b99dcc 150%);
-    box-shadow: 6px 4px 8px black;
-    border-radius: 20px;
-    
-}
 
 h1{
     text-align: center;
@@ -56,12 +34,58 @@ h2{
     font-size:  16px;
 }
 
-#profilePic{
-    border-radius:  100px;
-    width:          50%;
+p{
+    font-family: "Courier New";
 }
 
-@keyframes gradientAnimation{
-    from    {background: radial-gradient(circle at bottom right, #243059, #455480 75%);}
-    to      {background: radial-gradient(circle at top right, #243059, #455480 75%);}
+#topBar{
+    
+        flex-direction: row-reverse;
+
+    display:        flex;
+    flex-direction: column;
+    align-items:    flex-end;
+    
+}
+
+#main{
+     margin-top: 5%;
+}
+
+
+.menu{
+    flex-direction: row-reverse;
+    text-decoration:    none;
+    display:            flex;
+    list-style-type:    none;
+}
+
+a:visited{
+    color:              white;
+    text-decoration:    none;
+}
+
+#main{
+    display:    flex;
+    padding:    0 5%;
+    text-align: justify;
+}
+
+.card{
+    width:          33%;
+    padding:        15% 2%;
+    margin:         0 1%;
+    background:     radial-gradient(circle at bottom right, #243059, #455480 75%, #b99dcc 150%);
+    box-shadow:     6px 4px 8px black;    
+    border-radius:  20px;
+    max-width:      480px;
+}
+
+#card1{
+    text-align: center;
+}
+
+#profilePic{
+    border-radius:  100%;
+    width:          50%;
 }
