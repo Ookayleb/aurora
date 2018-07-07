@@ -1,0 +1,122 @@
+body{
+    background-color: black;
+}
+
+@keyframes opaTo50{
+    from{
+        opacity:    .5;
+        color:      #585859;
+    }
+    to{
+        opacity:    1;
+        color:      #c1c1c1;
+    }
+}
+
+
+#testext{
+    color:          #585859;
+    font-family:    Courier;
+    font-size:      150px;
+    font-weight:    bold;
+    top:            0;
+    left:           0;
+    
+/*
+    animation-name:             opaTo50;
+    animation-duration:         2s;
+    animation-delay:            1s;
+    animation-fill-mode:        forwards;
+    animation-iteration-count:  infinite;
+    animation-direction:        alternate;
+*/
+}
+
+/*
+#testext::after {
+    opacity:        0;
+    text-shadow:    3px 3px 25px #3793bf;
+    font-size:      150px;
+    content:        'NEON GLOW';
+    color:          transparent;
+    position:       absolute;
+    
+    top:            0;
+    left:           0;
+
+    animation-name:             buttonAnimation;
+    animation-duration:         .05s;
+    animation-delay:            1s;
+    animation-fill-mode:        forwards;
+    animation-iteration-count:  5;
+    animation-direction:        alternate;
+}
+
+@keyframes buttonAnimation{
+    from    {opacity: 0}
+    to      {opacity: 100}
+}
+*/
+
+#testext::after{
+    opacity:        1;
+    font-size:      150px;
+    content:        'NEON GLOW';
+    color:          transparent;
+    position:       absolute;
+    
+    top:            0;
+    left:           0;
+
+    
+    animation-name:             glow;
+    animation-duration:         1.5s;
+    animation-delay:            1s;
+    animation-fill-mode:        forwards;
+/*    animation-iteration-count:  5;*/
+}
+
+@keyframes glow{
+    12%{
+        text-shadow:    none;
+        opacity: 0;
+    }
+    13%{
+        text-shadow:    3px 3px 25px #3793bf;
+        opacity: 1;
+    }
+    18%{
+        text-shadow:    none;
+        opacity: 0;
+    }
+    21%{
+        text-shadow:    3px 3px 25px #3793bf;
+        opacity: 1;
+    }
+    30%{
+        text-shadow:    none;
+        opacity: 0;
+    }
+    35%{
+        text-shadow:    none;
+        opacity: 0;
+    }
+    45%{
+        text-shadow:    3px 3px 25px #3793bf;
+        opacity: 1;
+    }
+    57%{
+        text-shadow:    none;
+        opacity: 0;
+    }
+    90%{
+        text-shadow:    none;
+/*        text-shadow:    3px 3px 25px #c1c1c1;*/
+        opacity: 0;
+    }
+    100%{
+        text-shadow:    3px 3px 25px #3793bf;
+        opacity: 1;
+    }
+}
+
