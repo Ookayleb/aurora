@@ -1,3 +1,10 @@
+:root{
+    --themeRed:     #ed28c5;
+    --themeBlue:    #3793bf;
+    --themePurp:    #524891;
+    --themeYell:    #918a48;
+}
+
 body{
     background-color: black;
 }
@@ -9,27 +16,29 @@ body{
     }
     to{
         opacity:    1;
-        color:      #c1c1c1;
+        color:      #a1a1a1;
     }
 }
 
 
 #testext{
-    color:          #585859;
+    color:          #222222;
     font-family:    Courier;
     font-size:      150px;
     font-weight:    bold;
     top:            0;
     left:           0;
     
-/*
-    animation-name:             opaTo50;
-    animation-duration:         2s;
+    animation-name:             glowText;
+    animation-duration:         1.5s;
     animation-delay:            1s;
     animation-fill-mode:        forwards;
+/*
     animation-iteration-count:  infinite;
     animation-direction:        alternate;
 */
+    text-align: center;
+    padding-top: 40vh;
 }
 
 /*
@@ -61,62 +70,249 @@ body{
 #testext::after{
     opacity:        1;
     font-size:      150px;
-    content:        'NEON GLOW';
+    content:        'AURORA';
     color:          transparent;
     position:       absolute;
     
-    top:            0;
-    left:           0;
+    left:0;
+    right:0;
 
     
+/*
     animation-name:             glow;
     animation-duration:         1.5s;
     animation-delay:            1s;
     animation-fill-mode:        forwards;
-/*    animation-iteration-count:  5;*/
+*/
+    
+    animation: glow 1.5s 1s forwards, flicker 7s 6s infinite normal forwards;
 }
+
 
 @keyframes glow{
     12%{
         text-shadow:    none;
-        opacity: 0;
+        opacity:        0;
     }
     13%{
         text-shadow:    3px 3px 25px #3793bf;
-        opacity: 1;
+        opacity:        1;
     }
     18%{
         text-shadow:    none;
-        opacity: 0;
+        opacity:        0;
     }
     21%{
         text-shadow:    3px 3px 25px #3793bf;
-        opacity: 1;
+        opacity:        1;
     }
     30%{
         text-shadow:    none;
-        opacity: 0;
+        opacity:        0;
     }
     35%{
         text-shadow:    none;
-        opacity: 0;
+        opacity:        0;
     }
     45%{
         text-shadow:    3px 3px 25px #3793bf;
-        opacity: 1;
+        opacity:        1;
     }
     57%{
         text-shadow:    none;
-        opacity: 0;
+        opacity:        0;
     }
     90%{
         text-shadow:    none;
 /*        text-shadow:    3px 3px 25px #c1c1c1;*/
-        opacity: 0;
+        opacity:        0;
     }
     100%{
         text-shadow:    3px 3px 25px #3793bf;
-        opacity: 1;
+        opacity:        1;
     }
 }
 
+@keyframes glowText{
+    12%{
+        color:          #222222;
+    }
+    13%{
+        color:          #505050;
+    }
+    18%{
+        color:          #222222;
+    }
+    21%{
+        color:          #505050;
+    }
+    30%{
+        color:          #222222;
+    }
+    35%{
+       color:          #222222;
+    }
+    45%{
+        color:          #505050;
+    }
+    57%{
+        color:          #222222;
+    }
+    90%{
+        color:          #222222;
+/*        text-shadow:    3px 3px 25px #c1c1c1;*/
+    }
+    100%{
+       color:          #505050;
+    }
+}
+
+@keyframes flicker{
+    0%{
+        text-shadow:    3px 3px 25px #3793bf;
+        opacity:        1;
+    }
+    1%{
+        text-shadow:    none;
+        opacity:        0;
+    }
+    2%{
+         text-shadow:    3px 3px 25px #3793bf;
+        opacity:        1;
+    }
+    6.8%{
+        text-shadow:    3px 3px 25px #3793bf;
+        opacity:        1;
+    }
+    7%{
+        text-shadow:    none;
+        opacity:        0;
+    }
+    8%{
+        text-shadow:    3px 3px 25px #3793bf;
+        opacity:        1;
+    }
+    100%{
+        text-shadow:    3px 3px 25px #3793bf;
+        opacity:        1;
+    }
+}
+
+#testext2::after{
+    opacity:        1;
+    font-size:      150px;
+    content:        'LIGHTS';
+    color:          transparent;
+    position:       absolute;
+    
+    left:0;
+    right:0;
+
+    
+/*
+    animation-name:             glow;
+    animation-duration:         1.5s;
+    animation-delay:            1s;
+    animation-fill-mode:        forwards;
+*/
+    
+    animation: glow2 .7s 2.5s forwards, flicker2 3s 4s infinite normal forwards;
+}
+
+
+@keyframes flicker2{
+    0%{
+        text-shadow:    3px 3px 25px #ed28c5;
+        opacity:        1;
+    }
+    1%{
+        text-shadow:    none;
+        opacity:        0;
+    }
+    2%{
+         text-shadow:    3px 3px 25px #ed28c5;
+        opacity:        1;
+    }
+    6.8%{
+        text-shadow:    3px 3px 25px #ed28c5;
+        opacity:        1;
+    }
+    7%{
+        text-shadow:    none;
+        opacity:        0;
+    }
+    8%{
+        text-shadow:    3px 3px 25px #ed28c5;
+        opacity:        1;
+    }
+    100%{
+        text-shadow:    3px 3px 25px #ed28c5;
+        opacity:        1;
+    }
+}
+
+@keyframes glow2{
+    12%{
+        text-shadow:    none;
+        opacity:        0;
+    }
+    13%{
+        text-shadow:    3px 3px 25px #ed28c5;
+        opacity:        1;
+    }
+    18%{
+        text-shadow:    none;
+        opacity:        0;
+    }
+    21%{
+        text-shadow:    3px 3px 25px #ed28c5;
+        opacity:        1;
+    }
+    30%{
+        text-shadow:    none;
+        opacity:        0;
+    }
+    35%{
+        text-shadow:    none;
+        opacity:        0;
+    }
+    45%{
+        text-shadow:    3px 3px 25px #ed28c5;
+        opacity:        1;
+    }
+    57%{
+        text-shadow:    none;
+        opacity:        0;
+    }
+    90%{
+        text-shadow:    none;
+/*        text-shadow:    3px 3px 25px #c1c1c1;*/
+        opacity:        0;
+    }
+    100%{
+        text-shadow:    3px 3px 25px #ed28c5;
+        opacity:        1;
+    }
+}
+
+
+#testext2{
+    color:          #222222;
+    font-family:    Courier;
+    font-size:      150px;
+    font-weight:    bold;
+    top:            0;
+    left:           0;
+    
+    animation-name:             glowText;
+    animation-duration:         .7s;
+    animation-delay:            2.5s;
+    animation-fill-mode:        forwards;
+    
+    text-align: center;
+/*
+    
+    animation-iteration-count:  infinite;
+    animation-direction:        alternate;
+*/
+}
