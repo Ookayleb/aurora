@@ -24,7 +24,7 @@ body{
 #testext{
     color:          #222222;
     font-family:    Courier;
-    font-size:      150px;
+    font-size:      10rem;
     font-weight:    bold;
     top:            0;
     left:           0;
@@ -69,7 +69,7 @@ body{
 
 #testext::after{
     opacity:        1;
-    font-size:      150px;
+    font-size:      10rem;
     content:        'AURORA';
     color:          transparent;
     position:       absolute;
