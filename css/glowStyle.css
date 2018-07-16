@@ -9,18 +9,6 @@ body{
     background-color: black;
 }
 
-@keyframes opaTo50{
-    from{
-        opacity:    .5;
-        color:      #585859;
-    }
-    to{
-        opacity:    1;
-        color:      #a1a1a1;
-    }
-}
-
-
 #testext{
     color:          #222222;
     font-family:    Courier;
@@ -29,65 +17,48 @@ body{
     top:            0;
     left:           0;
     
-    animation-name:             glowText;
-    animation-duration:         1.5s;
-    animation-delay:            1s;
-    animation-fill-mode:        forwards;
-/*
-    animation-iteration-count:  infinite;
-    animation-direction:        alternate;
-*/
-    text-align: center;
-    padding-top: 40vh;
-}
+    animation:      glowText 1.5s 1s forwards;
 
-/*
-#testext::after {
-    opacity:        0;
-    text-shadow:    3px 3px 25px #3793bf;
-    font-size:      150px;
-    content:        'NEON GLOW';
+    text-align:     center;
+    padding-top:    40vh;
+}
+#testext::after{
+    content:        'AURORA';
+    opacity:        1;
     color:          transparent;
     position:       absolute;
     
+    left:           0;
+    right:          0;
+    
+    animation:      glow    1.5s    1s                  forwards, 
+                    flicker 7s      6s infinite normal  forwards;
+}
+
+#testext2{
+    color:          #222222;
+    font-family:    Courier;
+    font-size:      10rem;
+    font-weight:    bold;
     top:            0;
     left:           0;
-
-    animation-name:             buttonAnimation;
-    animation-duration:         .05s;
-    animation-delay:            1s;
-    animation-fill-mode:        forwards;
-    animation-iteration-count:  5;
-    animation-direction:        alternate;
+    
+    animation:      glowText .7s 2.5s forwards;
+    
+    text-align:     center;
 }
-
-@keyframes buttonAnimation{
-    from    {opacity: 0}
-    to      {opacity: 100}
-}
-*/
-
-#testext::after{
+#testext2::after{
+    content:        'LIGHTS';
     opacity:        1;
-    font-size:      10rem;
-    content:        'AURORA';
     color:          transparent;
     position:       absolute;
     
-    left:0;
-    right:0;
-
+    left:           0;
+    right:          0;
     
-/*
-    animation-name:             glow;
-    animation-duration:         1.5s;
-    animation-delay:            1s;
-    animation-fill-mode:        forwards;
-*/
-    
-    animation: glow 1.5s 1s forwards, flicker 7s 6s infinite normal forwards;
+    animation:      glow2       .7s 2.5s                    forwards, 
+                    flicker2    3s  4s      infinite normal forwards;
 }
-
 
 @keyframes glow{
     12%{
@@ -124,7 +95,6 @@ body{
     }
     90%{
         text-shadow:    none;
-/*        text-shadow:    3px 3px 25px #c1c1c1;*/
         opacity:        0;
     }
     100%{
@@ -160,7 +130,6 @@ body{
     }
     90%{
         color:          #222222;
-/*        text-shadow:    3px 3px 25px #c1c1c1;*/
     }
     100%{
        color:          #505050;
@@ -197,28 +166,6 @@ body{
         opacity:        1;
     }
 }
-
-#testext2::after{
-    opacity:        1;
-    font-size:      150px;
-    content:        'LIGHTS';
-    color:          transparent;
-    position:       absolute;
-    
-    left:0;
-    right:0;
-
-    
-/*
-    animation-name:             glow;
-    animation-duration:         1.5s;
-    animation-delay:            1s;
-    animation-fill-mode:        forwards;
-*/
-    
-    animation: glow2 .7s 2.5s forwards, flicker2 3s 4s infinite normal forwards;
-}
-
 
 @keyframes flicker2{
     0%{
@@ -286,7 +233,6 @@ body{
     }
     90%{
         text-shadow:    none;
-/*        text-shadow:    3px 3px 25px #c1c1c1;*/
         opacity:        0;
     }
     100%{
@@ -295,24 +241,13 @@ body{
     }
 }
 
-
-#testext2{
-    color:          #222222;
-    font-family:    Courier;
-    font-size:      150px;
-    font-weight:    bold;
-    top:            0;
-    left:           0;
-    
-    animation-name:             glowText;
-    animation-duration:         .7s;
-    animation-delay:            2.5s;
-    animation-fill-mode:        forwards;
-    
-    text-align: center;
-/*
-    
-    animation-iteration-count:  infinite;
-    animation-direction:        alternate;
-*/
+@keyframes opaTo50{
+    from{
+        opacity:    .5;
+        color:      #585859;
+    }
+    to{
+        opacity:    1;
+        color:      #a1a1a1;
+    }
 }
