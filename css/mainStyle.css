@@ -11,22 +11,22 @@ html{
 
 body{
     margin:             0;
-    
+
     background-color:   black;          /* fall back */
     background-image:   -webkit-radial-gradient(#1A203B, black, #455480 150%);  /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
     background-image:   -moz-radial-gradient(#1A203B, black, #455480 150%);     /* Firefox 3.6 - 15 */
     background-image:   -o-radial-gradient(#1A203B, black, #455480 150%);       /* Opera 11.1 - 12 */
-    
+
     background:         radial-gradient(#1A203B, black, #455480 150%);
-    
-    
-    background-image:   url("../images/gradientBackground.svg"); 
+
+
+    background-image:   url("../images/gradientBackground.svg");
     background-size:    cover;
-    
+
     color:              white;
     font-family:        'Open Sans', 'Roboto', sans-serif;
-   
-    
+
+
     display:            flex;
     flex-direction:     column;
     align-items:        center;
@@ -118,17 +118,17 @@ a:hover{
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #000; 
+    background: #000;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #555; 
+    background: #555;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #555;
 }
 
 #main{
@@ -138,11 +138,11 @@ a:hover{
 }
 
 .card{
-    width:          33%;
+    /* width:          33%; */
     padding:        15% 2%;
     margin:         0 1%;
     background:     radial-gradient(circle at bottom right, #243059, #455480 75%, #b99dcc 150%);
-    box-shadow:     6px 4px 8px black;    
+    box-shadow:     6px 4px 8px black;
     border-radius:  20px;
     max-width:      480px;
 }
